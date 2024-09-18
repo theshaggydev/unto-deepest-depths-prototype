@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dik7k0k7k27bp"]
+
+[ext_resource type="Script" path="res://src/battle/nodes/units/units.gd" id="1_tr8sx"]
+
+[node name="units" type="Node2D"]
+script = ExtResource("1_tr8sx")

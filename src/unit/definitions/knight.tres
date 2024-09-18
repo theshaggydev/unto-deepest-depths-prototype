@@ -1,0 +1,134 @@
+[gd_resource type="Resource" script_class="UnitDefinition" load_steps=24 format=3 uid="uid://da4gxe2vdp43a"]
+
+[ext_resource type="Script" path="res://src/unit/definitions/unit_definition.gd" id="1_5ng7a"]
+[ext_resource type="SpriteFrames" uid="uid://6ixwfbk83t7x" path="res://src/unit/art/knight/knight_spriteframes.tres" id="1_yne5v"]
+[ext_resource type="Script" path="res://src/unit/action_definition.gd" id="2_cuemb"]
+
+[sub_resource type="Resource" id="Resource_nibww"]
+script = ExtResource("2_cuemb")
+block_mode = 3
+path = Array[Vector2]([Vector2(0, 1)])
+end_point = Vector2(0, 1)
+
+[sub_resource type="Resource" id="Resource_0wot6"]
+script = ExtResource("2_cuemb")
+block_mode = 3
+path = Array[Vector2]([Vector2(-1, 1)])
+end_point = Vector2(-1, 1)
+
+[sub_resource type="Resource" id="Resource_hmb5x"]
+script = ExtResource("2_cuemb")
+block_mode = 3
+path = Array[Vector2]([Vector2(-1, 0)])
+end_point = Vector2(-1, 0)
+
+[sub_resource type="Resource" id="Resource_uy4i2"]
+script = ExtResource("2_cuemb")
+block_mode = 3
+path = Array[Vector2]([Vector2(-1, -1)])
+end_point = Vector2(-1, -1)
+
+[sub_resource type="Resource" id="Resource_q27h0"]
+script = ExtResource("2_cuemb")
+block_mode = 3
+path = Array[Vector2]([Vector2(0, -1)])
+end_point = Vector2(0, -1)
+
+[sub_resource type="Resource" id="Resource_g68yw"]
+script = ExtResource("2_cuemb")
+block_mode = 3
+path = Array[Vector2]([Vector2(1, -1)])
+end_point = Vector2(1, -1)
+
+[sub_resource type="Resource" id="Resource_nvnh1"]
+script = ExtResource("2_cuemb")
+block_mode = 3
+path = Array[Vector2]([Vector2(1, 0)])
+end_point = Vector2(1, 0)
+
+[sub_resource type="Resource" id="Resource_1m0du"]
+script = ExtResource("2_cuemb")
+block_mode = 3
+path = Array[Vector2]([Vector2(1, 1)])
+end_point = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_x86js"]
+script = ExtResource("2_cuemb")
+block_mode = 0
+path = Array[Vector2]([Vector2(0, 1)])
+end_point = Vector2(0, 1)
+
+[sub_resource type="Resource" id="Resource_er5nc"]
+script = ExtResource("2_cuemb")
+block_mode = 0
+path = Array[Vector2]([Vector2(1, 1)])
+end_point = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_gfvhp"]
+script = ExtResource("2_cuemb")
+block_mode = 0
+path = Array[Vector2]([Vector2(1, 0)])
+end_point = Vector2(1, 0)
+
+[sub_resource type="Resource" id="Resource_1twir"]
+script = ExtResource("2_cuemb")
+block_mode = 0
+path = Array[Vector2]([Vector2(1, -1)])
+end_point = Vector2(1, -1)
+
+[sub_resource type="Resource" id="Resource_62xan"]
+script = ExtResource("2_cuemb")
+block_mode = 0
+path = Array[Vector2]([Vector2(0, -1)])
+end_point = Vector2(0, -1)
+
+[sub_resource type="Resource" id="Resource_yj7xo"]
+script = ExtResource("2_cuemb")
+block_mode = 0
+path = Array[Vector2]([Vector2(-1, -1)])
+end_point = Vector2(-1, -1)
+
+[sub_resource type="Resource" id="Resource_k0q5w"]
+script = ExtResource("2_cuemb")
+block_mode = 0
+path = Array[Vector2]([Vector2(-1, 0)])
+end_point = Vector2(-1, 0)
+
+[sub_resource type="Resource" id="Resource_gjqgd"]
+script = ExtResource("2_cuemb")
+block_mode = 0
+path = Array[Vector2]([Vector2(-1, 1)])
+end_point = Vector2(-1, 1)
+
+[sub_resource type="Resource" id="Resource_f37lq"]
+script = ExtResource("2_cuemb")
+block_mode = 0
+path = Array[Vector2]([Vector2(0, 1), Vector2(0, 2)])
+end_point = Vector2(0, 2)
+
+[sub_resource type="Resource" id="Resource_0bdau"]
+script = ExtResource("2_cuemb")
+block_mode = 0
+path = Array[Vector2]([Vector2(0, -1), Vector2(0, -2)])
+end_point = Vector2(0, -2)
+
+[sub_resource type="Resource" id="Resource_t72i4"]
+script = ExtResource("2_cuemb")
+block_mode = 0
+path = Array[Vector2]([Vector2(1, 0), Vector2(2, 0)])
+end_point = Vector2(2, 0)
+
+[sub_resource type="Resource" id="Resource_wos32"]
+script = ExtResource("2_cuemb")
+block_mode = 0
+path = Array[Vector2]([Vector2(-1, 0), Vector2(-2, 0)])
+end_point = Vector2(-2, 0)
+
+[resource]
+script = ExtResource("1_5ng7a")
+name = "Knight"
+type = 0
+frames = ExtResource("1_yne5v")
+type_components = Array[PackedScene]([])
+move_definitions = Array[ExtResource("2_cuemb")]([SubResource("Resource_x86js"), SubResource("Resource_er5nc"), SubResource("Resource_gfvhp"), SubResource("Resource_1twir"), SubResource("Resource_62xan"), SubResource("Resource_yj7xo"), SubResource("Resource_k0q5w"), SubResource("Resource_gjqgd"), SubResource("Resource_f37lq"), SubResource("Resource_0bdau"), SubResource("Resource_t72i4"), SubResource("Resource_wos32")])
+ability_definitions = Array[ExtResource("2_cuemb")]([SubResource("Resource_nibww"), SubResource("Resource_0wot6"), SubResource("Resource_hmb5x"), SubResource("Resource_uy4i2"), SubResource("Resource_q27h0"), SubResource("Resource_g68yw"), SubResource("Resource_nvnh1"), SubResource("Resource_1m0du")])

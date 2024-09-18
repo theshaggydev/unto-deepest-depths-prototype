@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://dv61bs82ppcx"]
+
+[ext_resource type="Script" path="res://src/battle/battle.gd" id="1_g48xb"]
+[ext_resource type="TileSet" uid="uid://bhs3agn1mn0oo" path="res://src/maps/grass_open/grass_open_tileset.tres" id="2_4o5gu"]
+[ext_resource type="PackedScene" uid="uid://dik7k0k7k27bp" path="res://src/battle/nodes/units/units.tscn" id="2_5hg2x"]
+[ext_resource type="PackedScene" uid="uid://0r543lk32lwo" path="res://src/maps/highlights/cell_highlights.tscn" id="3_b2wmv"]
+[ext_resource type="PackedScene" uid="uid://bvh861ymx55wu" path="res://src/unit/unit.tscn" id="3_qxq8g"]
+[ext_resource type="Resource" uid="uid://dnye6eu2q8q5o" path="res://src/unit/definitions/archer.tres" id="6_bcf76"]
+[ext_resource type="Resource" uid="uid://di37b3hbh35g7" path="res://src/unit/definitions/mage.tres" id="6_hpbej"]
+[ext_resource type="Resource" uid="uid://cgkxdpau8vmsu" path="res://src/unit/definitions/peasant.tres" id="6_r3dr5"]
+[ext_resource type="Resource" uid="uid://da4gxe2vdp43a" path="res://src/unit/definitions/knight.tres" id="7_u5ntj"]
+
+[node name="battle" type="Node2D"]
+script = ExtResource("1_g48xb")
+
+[node name="tiles" type="TileMap" parent="."]
+unique_name_in_owner = true
+tile_set = ExtResource("2_4o5gu")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 65536, 0, 1, 131072, 0, 2, 0, 0, 3, 0, 0, 4, 65536, 0, 5, 65536, 0, 6, 65536, 0, 7, 0, 0, 8, 0, 0, 9, 131072, 0, 65545, 131072, 0, 131081, 131072, 0, 196617, 65536, 0, 262153, 131072, 0, 327689, 65536, 0, 393225, 131072, 0, 458761, 131072, 0, 524297, 65536, 0, 589833, 0, 0, 589832, 131072, 0, 589831, 65536, 0, 589830, 131072, 0, 589829, 131072, 0, 589828, 131072, 0, 589827, 65536, 0, 589826, 0, 0, 589825, 131072, 0, 589824, 0, 0, 524288, 0, 0, 458752, 0, 0, 393216, 131072, 0, 327680, 131072, 0, 262144, 131072, 0, 196608, 65536, 0, 131072, 65536, 0, 65536, 65536, 0, 393219, 0, 0, 327683, 131072, 0, 262147, 131072, 0, 196611, 65536, 0, 131075, 0, 0, 65539, 65536, 0, 65538, 131072, 0, 65537, 131072, 0, 131073, 0, 0, 196609, 65536, 0, 262145, 0, 0, 327681, 65536, 0, 393217, 65536, 0, 458753, 0, 0, 524289, 65536, 0, 524290, 0, 0, 458754, 65536, 0, 393218, 131072, 0, 327682, 0, 0, 262146, 65536, 0, 196610, 131072, 0, 131074, 131072, 0, 458755, 65536, 0, 524291, 65536, 0, 524292, 65536, 0, 458756, 131072, 0, 393220, 131072, 0, 327684, 0, 0, 262148, 131072, 0, 196612, 65536, 0, 131076, 131072, 0, 65540, 0, 0, 65541, 0, 0, 131077, 65536, 0, 196613, 0, 0, 262149, 65536, 0, 327685, 65536, 0, 393221, 65536, 0, 458757, 0, 0, 524293, 131072, 0, 524294, 131072, 0, 458758, 65536, 0, 393222, 0, 0, 327686, 131072, 0, 262150, 131072, 0, 196614, 65536, 0, 131078, 0, 0, 65542, 0, 0, 65543, 0, 0, 131079, 131072, 0, 196615, 65536, 0, 262151, 131072, 0, 327687, 0, 0, 393223, 131072, 0, 458759, 65536, 0, 524295, 131072, 0, 524296, 0, 0, 458760, 65536, 0, 393224, 131072, 0, 327688, 131072, 0, 262152, 65536, 0, 196616, 65536, 0, 131080, 0, 0, 65544, 131072, 0, 655360, 0, 2, 655361, 0, 2, 655362, 0, 2, 655363, 0, 2, 655364, 0, 2, 655365, 0, 2, 655366, 0, 2, 655367, 0, 2, 655368, 0, 2, 655369, 0, 2, -65536, 0, 1, -65535, 0, 1, -65534, 0, 1, -65533, 0, 1, -65532, 0, 1, -65531, 0, 1, -65530, 0, 1, -65529, 0, 1, -65528, 0, 1, -65527, 0, 1)
+
+[node name="cell_highlights" parent="." instance=ExtResource("3_b2wmv")]
+
+[node name="units" parent="." instance=ExtResource("2_5hg2x")]
+unique_name_in_owner = true
+y_sort_enabled = true
+
+[node name="player" type="Node2D" parent="units"]
+y_sort_enabled = true
+
+[node name="unit3" parent="units/player" instance=ExtResource("3_qxq8g")]
+position = Vector2(65, 90)
+def = ExtResource("7_u5ntj")
+
+[node name="unit4" parent="units/player" instance=ExtResource("3_qxq8g")]
+position = Vector2(70, 101)
+def = ExtResource("6_bcf76")
+
+[node name="unit2" parent="units/player" instance=ExtResource("3_qxq8g")]
+position = Vector2(101, 91)
+def = ExtResource("6_hpbej")
+
+[node name="opponent" type="Node2D" parent="units"]
+y_sort_enabled = true
+
+[node name="unit3" parent="units/opponent" instance=ExtResource("3_qxq8g")]
+position = Vector2(103, 112)
+def = ExtResource("6_r3dr5")
+
+[node name="nonplayer" type="Node2D" parent="units"]
+y_sort_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(87, 87)
+zoom = Vector2(5.59, 5.59)

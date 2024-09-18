@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://rk5v4108hjoh"]
+
+[ext_resource type="Script" path="res://src/unit/type_components/mage/mage_attack_flame_generator.gd" id="1_tkiob"]
+
+[node name="mage_attack_flame_generator" type="Node2D"]
+script = ExtResource("1_tkiob")
+
+[node name="timer" type="Timer" parent="."]
+one_shot = true

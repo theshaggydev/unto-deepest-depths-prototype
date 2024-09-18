@@ -1,0 +1,49 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://c6thn3bd2hngh"]
+
+[ext_resource type="Texture2D" uid="uid://cp44vbhur3jno" path="res://src/unit/art/mage/tile_flame.png" id="1_u6q3o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psw61"]
+atlas = ExtResource("1_u6q3o")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tcpa"]
+atlas = ExtResource("1_u6q3o")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itdd1"]
+atlas = ExtResource("1_u6q3o")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpsdq"]
+atlas = ExtResource("1_u6q3o")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny7cj"]
+atlas = ExtResource("1_u6q3o")
+region = Rect2(64, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psw61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tcpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itdd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpsdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny7cj")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]

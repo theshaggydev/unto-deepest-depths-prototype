@@ -1,0 +1,86 @@
+[gd_resource type="Resource" script_class="UnitDefinition" load_steps=16 format=3 uid="uid://cgkxdpau8vmsu"]
+
+[ext_resource type="Script" path="res://src/unit/definitions/unit_definition.gd" id="1_8i5pk"]
+[ext_resource type="SpriteFrames" uid="uid://b46mxr3vrqtys" path="res://src/unit/art/peasant/peasant_spriteframes.tres" id="1_qubse"]
+[ext_resource type="Script" path="res://src/unit/action_definition.gd" id="2_6sa58"]
+
+[sub_resource type="Resource" id="Resource_kv6ls"]
+script = ExtResource("2_6sa58")
+block_mode = 3
+path = Array[Vector2]([Vector2(0, 1)])
+end_point = Vector2(0, 1)
+
+[sub_resource type="Resource" id="Resource_3r7tr"]
+script = ExtResource("2_6sa58")
+block_mode = 3
+path = Array[Vector2]([Vector2(0, -1)])
+end_point = Vector2(0, -1)
+
+[sub_resource type="Resource" id="Resource_q6sbi"]
+script = ExtResource("2_6sa58")
+block_mode = 3
+path = Array[Vector2]([Vector2(1, 0)])
+end_point = Vector2(1, 0)
+
+[sub_resource type="Resource" id="Resource_afp5n"]
+script = ExtResource("2_6sa58")
+block_mode = 3
+path = Array[Vector2]([Vector2(-1, 0)])
+end_point = Vector2(-1, 0)
+
+[sub_resource type="Resource" id="Resource_ehg4u"]
+script = ExtResource("2_6sa58")
+block_mode = 0
+path = Array[Vector2]([Vector2(0, 1)])
+end_point = Vector2(0, 1)
+
+[sub_resource type="Resource" id="Resource_6n46p"]
+script = ExtResource("2_6sa58")
+block_mode = 0
+path = Array[Vector2]([Vector2(1, 1)])
+end_point = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_igoxf"]
+script = ExtResource("2_6sa58")
+block_mode = 0
+path = Array[Vector2]([Vector2(1, 0)])
+end_point = Vector2(1, 0)
+
+[sub_resource type="Resource" id="Resource_s2rgw"]
+script = ExtResource("2_6sa58")
+block_mode = 0
+path = Array[Vector2]([Vector2(1, -1)])
+end_point = Vector2(1, -1)
+
+[sub_resource type="Resource" id="Resource_hfh77"]
+script = ExtResource("2_6sa58")
+block_mode = 0
+path = Array[Vector2]([Vector2(0, -1)])
+end_point = Vector2(0, -1)
+
+[sub_resource type="Resource" id="Resource_l4rjs"]
+script = ExtResource("2_6sa58")
+block_mode = 0
+path = Array[Vector2]([Vector2(-1, -1)])
+end_point = Vector2(-1, -1)
+
+[sub_resource type="Resource" id="Resource_mljte"]
+script = ExtResource("2_6sa58")
+block_mode = 0
+path = Array[Vector2]([Vector2(-1, 0)])
+end_point = Vector2(-1, 0)
+
+[sub_resource type="Resource" id="Resource_67w1i"]
+script = ExtResource("2_6sa58")
+block_mode = 0
+path = Array[Vector2]([Vector2(-1, 1)])
+end_point = Vector2(-1, 1)
+
+[resource]
+script = ExtResource("1_8i5pk")
+name = "Peasant"
+type = 4
+frames = ExtResource("1_qubse")
+type_components = Array[PackedScene]([])
+move_definitions = Array[ExtResource("2_6sa58")]([SubResource("Resource_ehg4u"), SubResource("Resource_6n46p"), SubResource("Resource_igoxf"), SubResource("Resource_s2rgw"), SubResource("Resource_hfh77"), SubResource("Resource_l4rjs"), SubResource("Resource_mljte"), SubResource("Resource_67w1i")])
+ability_definitions = Array[ExtResource("2_6sa58")]([SubResource("Resource_kv6ls"), SubResource("Resource_3r7tr"), SubResource("Resource_q6sbi"), SubResource("Resource_afp5n")])

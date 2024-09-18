@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="UnitDefinition" load_steps=10 format=3 uid="uid://di37b3hbh35g7"]
+
+[ext_resource type="SpriteFrames" uid="uid://bp04urvxoxrjp" path="res://src/unit/art/mage/mage_spriteframes.tres" id="1_4u05d"]
+[ext_resource type="Script" path="res://src/unit/definitions/unit_definition.gd" id="1_bk3mn"]
+[ext_resource type="Script" path="res://src/unit/action_definition.gd" id="2_j6gmm"]
+[ext_resource type="PackedScene" uid="uid://rk5v4108hjoh" path="res://src/unit/type_components/mage/mage_attack_flame_generator.tscn" id="3_eyu1m"]
+
+[sub_resource type="Resource" id="Resource_cs4j1"]
+script = ExtResource("2_j6gmm")
+block_mode = 3
+path = Array[Vector2]([Vector2(-1, 2), Vector2(0, 2), Vector2(1, 2), Vector2(-2, 1), Vector2(-2, 0), Vector2(-2, -1), Vector2(2, 1), Vector2(2, 0), Vector2(2, -1), Vector2(-1, -2), Vector2(0, -2), Vector2(1, -2)])
+end_point = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_4mvqa"]
+script = ExtResource("2_j6gmm")
+block_mode = 0
+path = Array[Vector2]([Vector2(0, 1)])
+end_point = Vector2(0, 1)
+
+[sub_resource type="Resource" id="Resource_4n2h2"]
+script = ExtResource("2_j6gmm")
+block_mode = 0
+path = Array[Vector2]([Vector2(1, 0)])
+end_point = Vector2(1, 0)
+
+[sub_resource type="Resource" id="Resource_b6ygl"]
+script = ExtResource("2_j6gmm")
+block_mode = 0
+path = Array[Vector2]([Vector2(0, -1)])
+end_point = Vector2(0, -1)
+
+[sub_resource type="Resource" id="Resource_7pycl"]
+script = ExtResource("2_j6gmm")
+block_mode = 0
+path = Array[Vector2]([Vector2(-1, 0)])
+end_point = Vector2(-1, 0)
+
+[resource]
+script = ExtResource("1_bk3mn")
+name = "Mage"
+type = 2
+frames = ExtResource("1_4u05d")
+type_components = Array[PackedScene]([ExtResource("3_eyu1m")])
+move_definitions = Array[ExtResource("2_j6gmm")]([SubResource("Resource_4mvqa"), SubResource("Resource_4n2h2"), SubResource("Resource_b6ygl"), SubResource("Resource_7pycl")])
+ability_definitions = Array[ExtResource("2_j6gmm")]([SubResource("Resource_cs4j1")])

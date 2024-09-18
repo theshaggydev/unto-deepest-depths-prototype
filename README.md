@@ -1,0 +1,4 @@
+# Unto Deepest Depths Prototype
+This is early prototype code for the core game loop of [Unto Deepest Depths](https://store.steampowered.com/app/3106600/?utm_source=github), provided as a learning example on how I structure turn-based games in Godot 4. The code here is provided as-is, with no warranty.
+
+If you want to know more about why the code is structured this way, you can [read about it](https://shaggydev.com/2024/09/04/unto-deepest-depths-devlog/) or [watch the devlog](https://youtu.be/w6jXgaWHo1s). Please note that the code here is not necessarily reflective of the current codebase, nor does it exactly reflect what is discussed in the devlog, as the code here is from the *very early* proof of concept days. Still, it should suffice to see how everything works together in practice.

@@ -1,0 +1,18 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bhs3agn1mn0oo"]
+
+[ext_resource type="Texture2D" uid="uid://ciwfhilsmpu5o" path="res://src/maps/grass_open/grass_open_tiles.png" id="1_gcmaj"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pjir3"]
+texture = ExtResource("1_gcmaj")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+0:1/0/custom_data_0 = true
+0:2/0 = 0
+0:2/0/custom_data_0 = true
+
+[resource]
+custom_data_layer_0/name = "is_solid"
+custom_data_layer_0/type = 1
+sources/0 = SubResource("TileSetAtlasSource_pjir3")

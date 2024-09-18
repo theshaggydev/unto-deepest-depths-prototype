@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://0r543lk32lwo"]
+
+[ext_resource type="Script" path="res://src/maps/highlights/cell_highlights.gd" id="1_unbld"]
+[ext_resource type="Texture2D" uid="uid://bw4yxtmvq58a4" path="res://src/maps/highlights/cell_highlight.png" id="2_ngbib"]
+
+[node name="cell_highlights" type="Node2D"]
+script = ExtResource("1_unbld")
+
+[node name="paths_fill" type="Node2D" parent="."]
+
+[node name="paths" type="Node2D" parent="."]
+
+[node name="attacks" type="Node2D" parent="."]
+
+[node name="mouse_highlight" type="Sprite2D" parent="."]
+modulate = Color(1, 0.875, 0.5, 1)
+texture = ExtResource("2_ngbib")
+centered = false

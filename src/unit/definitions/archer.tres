@@ -1,0 +1,86 @@
+[gd_resource type="Resource" script_class="UnitDefinition" load_steps=16 format=3 uid="uid://dnye6eu2q8q5o"]
+
+[ext_resource type="SpriteFrames" uid="uid://brmtcyhxw7rr8" path="res://src/unit/art/archer/archer_spriteframes.tres" id="1_6hsp3"]
+[ext_resource type="Script" path="res://src/unit/definitions/unit_definition.gd" id="1_bpnlc"]
+[ext_resource type="Script" path="res://src/unit/action_definition.gd" id="2_vhtr3"]
+
+[sub_resource type="Resource" id="Resource_g4b0h"]
+script = ExtResource("2_vhtr3")
+block_mode = 2
+path = Array[Vector2]([Vector2(0, 1), Vector2(0, 2), Vector2(0, 3), Vector2(0, 4)])
+end_point = Vector2(0, 4)
+
+[sub_resource type="Resource" id="Resource_1c5nj"]
+script = ExtResource("2_vhtr3")
+block_mode = 2
+path = Array[Vector2]([Vector2(0, -1), Vector2(0, -2), Vector2(0, -3), Vector2(0, -4)])
+end_point = Vector2(0, -4)
+
+[sub_resource type="Resource" id="Resource_05nw8"]
+script = ExtResource("2_vhtr3")
+block_mode = 2
+path = Array[Vector2]([Vector2(1, 0), Vector2(2, 0), Vector2(3, 0), Vector2(4, 0)])
+end_point = Vector2(4, 0)
+
+[sub_resource type="Resource" id="Resource_bi154"]
+script = ExtResource("2_vhtr3")
+block_mode = 2
+path = Array[Vector2]([Vector2(-1, 0), Vector2(-2, 0), Vector2(-3, 0), Vector2(-4, 0)])
+end_point = Vector2(-4, 0)
+
+[sub_resource type="Resource" id="Resource_vjiri"]
+script = ExtResource("2_vhtr3")
+block_mode = 0
+path = Array[Vector2]([Vector2(1, 1)])
+end_point = Vector2(1, 1)
+
+[sub_resource type="Resource" id="Resource_ksy2q"]
+script = ExtResource("2_vhtr3")
+block_mode = 0
+path = Array[Vector2]([Vector2(1, -1)])
+end_point = Vector2(1, -1)
+
+[sub_resource type="Resource" id="Resource_vdtad"]
+script = ExtResource("2_vhtr3")
+block_mode = 0
+path = Array[Vector2]([Vector2(-1, -1)])
+end_point = Vector2(-1, -1)
+
+[sub_resource type="Resource" id="Resource_2v8nb"]
+script = ExtResource("2_vhtr3")
+block_mode = 0
+path = Array[Vector2]([Vector2(-1, 1)])
+end_point = Vector2(-1, 1)
+
+[sub_resource type="Resource" id="Resource_txw7i"]
+script = ExtResource("2_vhtr3")
+block_mode = 0
+path = Array[Vector2]([Vector2(1, 1)])
+end_point = Vector2(2, 2)
+
+[sub_resource type="Resource" id="Resource_r6rhk"]
+script = ExtResource("2_vhtr3")
+block_mode = 0
+path = Array[Vector2]([Vector2(1, -1)])
+end_point = Vector2(2, -2)
+
+[sub_resource type="Resource" id="Resource_1btnv"]
+script = ExtResource("2_vhtr3")
+block_mode = 0
+path = Array[Vector2]([Vector2(-1, -1)])
+end_point = Vector2(-2, -2)
+
+[sub_resource type="Resource" id="Resource_wrpqr"]
+script = ExtResource("2_vhtr3")
+block_mode = 0
+path = Array[Vector2]([Vector2(-1, 1)])
+end_point = Vector2(-2, 2)
+
+[resource]
+script = ExtResource("1_bpnlc")
+name = "Archer"
+type = 1
+frames = ExtResource("1_6hsp3")
+type_components = Array[PackedScene]([])
+move_definitions = Array[ExtResource("2_vhtr3")]([SubResource("Resource_vjiri"), SubResource("Resource_ksy2q"), SubResource("Resource_vdtad"), SubResource("Resource_2v8nb"), SubResource("Resource_txw7i"), SubResource("Resource_r6rhk"), SubResource("Resource_1btnv"), SubResource("Resource_wrpqr")])
+ability_definitions = Array[ExtResource("2_vhtr3")]([SubResource("Resource_g4b0h"), SubResource("Resource_1c5nj"), SubResource("Resource_05nw8"), SubResource("Resource_bi154")])
